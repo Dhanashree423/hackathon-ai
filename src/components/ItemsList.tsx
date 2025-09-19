@@ -11,9 +11,10 @@ interface ItemsListProps {
   filter: "all" | "lost" | "found";
   onFilterChange: (filter: "all" | "lost" | "found") => void;
   onMarkResolved: (id: string) => void;
+  onUndoResolved: (id: string) => void;
 }
 
-const ItemsList = ({ items, filter, onFilterChange, onMarkResolved }: ItemsListProps) => {
+const ItemsList = ({ items, filter, onFilterChange, onMarkResolved, onUndoResolved }: ItemsListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"date" | "name" | "created">("created");
   const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
@@ -223,6 +224,7 @@ const ItemsList = ({ items, filter, onFilterChange, onMarkResolved }: ItemsListP
                 key={item.id} 
                 item={item} 
                 onMarkResolved={onMarkResolved}
+                onUndoResolved={onUndoResolved}
               />
             ))}
           </div>

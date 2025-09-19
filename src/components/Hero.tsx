@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, MapPin, Clock } from "lucide-react";
+import FloatingDecor from "@/components/FloatingDecor";
 
 interface HeroProps {
   onShowForm: () => void;
@@ -14,7 +15,9 @@ const Hero = ({ onShowForm }: HeroProps) => {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground overflow-hidden">
+    <section id="home" className="relative bg-gradient-to-br from-primary via-primary to-primary/80 text-primary-foreground overflow-hidden">
+      {/* subtle floating pastel shapes */}
+      <FloatingDecor />
       <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <div className="text-center">

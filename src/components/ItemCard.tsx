@@ -8,12 +8,20 @@ import { toast } from "sonner";
 interface ItemCardProps {
   item: LostFoundItem;
   onMarkResolved: (id: string) => void;
+  onUndoResolved: (id: string) => void;
 }
 
-const ItemCard = ({ item, onMarkResolved }: ItemCardProps) => {
+const ItemCard = ({ item, onMarkResolved, onUndoResolved }: ItemCardProps) => {
   const handleMarkResolved = () => {
     onMarkResolved(item.id);
     toast.success("Item marked as resolved!");
+  };
+
+  const handleUndo = () => {
+    onUndoResolved(item.id);
+    toast.message("Resolution undone", {
+      description: "This item is visible again in active lists.",
+    });
   };
 
   const handleContactClick = (contactInfo: string) => {
@@ -98,7 +106,7 @@ const ItemCard = ({ item, onMarkResolved }: ItemCardProps) => {
         </div>
 
         {/* Action Button */}
-        {!item.resolved && (
+        {!item.resolved ? (
           <Button
             onClick={handleMarkResolved}
             variant="outline"
@@ -107,6 +115,15 @@ const ItemCard = ({ item, onMarkResolved }: ItemCardProps) => {
           >
             <CheckCircle className="w-4 h-4 mr-2" />
             Mark as Resolved
+          </Button>
+        ) : (
+          <Button
+            onClick={handleUndo}
+            variant="outline"
+            size="sm"
+            className="w-full bg-accent hover:bg-accent/80 text-foreground border-border transition-all duration-200"
+          >
+            Undo
           </Button>
         )}
 

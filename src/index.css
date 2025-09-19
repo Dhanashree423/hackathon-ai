@@ -8,56 +8,66 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
+    /* Base */
+    /* Soft, light neutral background (cream/beige) and charcoal text */
+    --background: 40 33% 96%;
     --foreground: 220 14% 16%;
 
+    /* Surfaces */
     --card: 0 0% 100%;
     --card-foreground: 220 14% 16%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 14% 16%;
 
-    --primary: 221 83% 53%;
+    /* Accents */
+    /* Primary: pastel purple */
+    --primary: 265 50% 68%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 94%;
+    /* Secondary/Muted backgrounds: soft neutrals */
+    --secondary: 40 25% 92%;
     --secondary-foreground: 220 14% 16%;
 
-    --muted: 210 40% 94%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 40 25% 92%;
+    --muted-foreground: 215 16% 40%;
 
-    --accent: 210 40% 94%;
+    /* Accent backgrounds for subtle hovers */
+    --accent: 265 45% 92%;
     --accent-foreground: 220 14% 16%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --success: 142 71% 45%;
+    /* Gentle success (soft green) */
+    --success: 145 38% 42%;
     --success-foreground: 210 40% 98%;
 
-    --warning: 38 92% 50%;
+    /* Muted orange for warning */
+    --warning: 28 80% 60%;
     --warning-foreground: 220 14% 16%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    /* Lines and focus */
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 265 50% 68%;
 
     /* Campus Lost & Found Design System */
-    --campus-blue: 221 83% 53%;
-    --campus-blue-light: 221 83% 93%;
-    --campus-green: 142 71% 45%;
-    --campus-green-light: 142 71% 93%;
-    --campus-orange: 38 92% 50%;
-    --campus-orange-light: 38 92% 93%;
+    --campus-blue: 265 50% 68%; /* aligned with primary */
+    --campus-blue-light: 265 45% 92%;
+    --campus-green: 145 38% 42%;
+    --campus-green-light: 145 38% 90%;
+    --campus-orange: 28 80% 60%;
+    --campus-orange-light: 28 80% 90%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(221 83% 53%), hsl(221 83% 43%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(265 50% 72%), hsl(265 50% 62%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(40 33% 96%));
     
     /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(220 14% 16% / 0.1), 0 2px 4px -2px hsl(220 14% 16% / 0.1);
-    --shadow-card-hover: 0 10px 15px -3px hsl(220 14% 16% / 0.1), 0 4px 6px -4px hsl(220 14% 16% / 0.1);
-    --shadow-nav: 0 1px 3px 0 hsl(220 14% 16% / 0.1), 0 1px 2px -1px hsl(220 14% 16% / 0.1);
+    --shadow-card: 0 4px 6px -1px hsl(220 14% 16% / 0.08), 0 2px 4px -2px hsl(220 14% 16% / 0.08);
+    --shadow-card-hover: 0 10px 15px -3px hsl(220 14% 16% / 0.08), 0 4px 6px -4px hsl(220 14% 16% / 0.08);
+    --shadow-nav: 0 1px 3px 0 hsl(220 14% 16% / 0.08), 0 1px 2px -1px hsl(220 14% 16% / 0.08);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -65,68 +75,74 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 40 25% 95%;
 
     --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 265 50% 68%;
 
     --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 265 45% 92%;
 
     --sidebar-accent-foreground: 240 5.9% 10%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 35 20% 88%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 265 50% 68%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Warm, nude-leaning dark theme with high readability */
+    --background: 30 15% 12%;
+    --foreground: 30 20% 92%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 12% 14%;
+    --card-foreground: 30 20% 92%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 12% 14%;
+    --popover-foreground: 30 20% 92%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Warm nude accent for primary */
+    --primary: 28 70% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 28 20% 18%;
+    --secondary-foreground: 30 20% 92%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 28 16% 18%;
+    /* Boosted for better readability on dark backgrounds */
+    --muted-foreground: 28 20% 80%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 28 24% 20%;
+    --accent-foreground: 30 20% 92%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 28 14% 20%;
+    --input: 28 14% 20%;
+    --ring: 28 70% 65%;
+    --sidebar-background: 28 14% 16%;
+    --sidebar-foreground: 30 20% 92%;
+    --sidebar-primary: 28 70% 65%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 28 24% 20%;
+    --sidebar-accent-foreground: 30 20% 92%;
+    --sidebar-border: 28 14% 20%;
+    --sidebar-ring: 28 70% 65%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    /* Replaced Tailwind @apply with raw CSS for editor compatibility */
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground;
+    /* Replaced Tailwind @apply with raw CSS for editor compatibility */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }

@@ -31,6 +31,12 @@ const Navigation = ({ onFilterChange, onShowForm, currentFilter }: NavigationPro
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
+              onClick={() => scrollToSection("home")}
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </button>
+            <button
               onClick={() => {
                 onFilterChange("all");
                 scrollToSection("items");
@@ -69,6 +75,12 @@ const Navigation = ({ onFilterChange, onShowForm, currentFilter }: NavigationPro
             >
               About
             </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Contact
+            </button>
           </div>
 
           {/* CTA Button */}
@@ -95,6 +107,12 @@ const Navigation = ({ onFilterChange, onShowForm, currentFilter }: NavigationPro
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2 border-t border-border">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Home
+            </button>
             <button
               onClick={() => {
                 onFilterChange("all");
@@ -133,6 +151,12 @@ const Navigation = ({ onFilterChange, onShowForm, currentFilter }: NavigationPro
               className="block w-full text-left px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
             >
               About
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="block w-full text-left px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            >
+              Contact
             </button>
             <div className="pt-2">
               <Button onClick={onShowForm} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">

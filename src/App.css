@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #ffffff; /* ensures white background */
+  color: #000000;            /* makes text dark and visible */
 }
 
 .logo {
@@ -15,7 +17,7 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #83e611aa);
 }
 
 @keyframes logo-spin {
@@ -35,8 +37,11 @@
 
 .card {
   padding: 2em;
+  background: #dd1414; /* light background for contrast */
+  color: #000000;       /* dark text for visibility */
+  border-radius: 8px;   /* optional for cleaner look */
 }
 
 .read-the-docs {
-  color: #888;
+  color: #333333; /* darker shade than #888 for better readability */
 }
